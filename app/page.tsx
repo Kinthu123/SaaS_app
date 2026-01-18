@@ -1,14 +1,14 @@
 import CompanionCard from '@/components/CompanionCard'
 import CompanionList from '@/components/CompanionList'
 import CTA from '@/components/CTA'
-import { Button } from '@/components/ui/button'
+import { recentSessions } from '@/constants'
 import React from 'react'
 
 
 const Page = () => {
   return (
     <main>
-      <h1 className="text-2xl underline">popular Companions</h1>
+      <h1 className="text-2xl underline">Dashboard</h1>
       <section className="home-section">
         <CompanionCard
            id="1"
@@ -37,7 +37,11 @@ const Page = () => {
       </section>
 
       <section className='home-section'>
-      <CompanionList />
+      <CompanionList 
+         title="Recently completed sessions"
+         companions={recentSessions}
+         classNames="w-2/3 max-lg:w-full"
+      />
       <CTA />
 
       </section>
